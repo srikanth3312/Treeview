@@ -16,13 +16,16 @@ namespace TreeViewTransfer
     /// </summary>
     public partial class MainWindow : Window
     {
-        private TreeViewItem? draggedItem;
+        private TreeViewItem draggedItem;
+
         public MainWindow()
         {
             InitializeComponent();
             InitializeSourceTreeView();
             InitializeDestinationTreeView();
         }
+
+        // Initialize the Source TreeView
         private void InitializeSourceTreeView()
         {
             // Add items to the source TreeView
@@ -113,5 +116,6 @@ namespace TreeViewTransfer
                 e.Effects = DragDropEffects.None;
             }
         }
+
     }
 }
